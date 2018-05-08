@@ -1,0 +1,94 @@
+<% include ../views/common/head.html %>
+    <title>首页</title>
+    <link rel="stylesheet" href="./stylesheets/index/css/index.css">
+
+</head>
+<body>
+    <!--导航条-->
+    <% include ../views/common/navigation.html %>
+    <!--轮播图-->
+    <div id="myCarousel" class="carousel slide"  data-ride="carousel" data-interval="4000">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators Indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner CarouselInner">
+            <div class="item active">
+                <img src="" alt="First slide">
+                <div class="carousel-caption">标题 1</div>
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right iconfont" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!--技巧-->
+    <div class="content-auto skills">
+        <div class="skills-title"></div>
+        <div class="carousel Carousel">
+            <ul class="CarouselUl">
+
+            </ul>
+            <div class="clearfix"></div>
+            <a class="prev Prev" href="#"><i class="iconfont icon-back next-icon"></i></a>
+            <a class="next Next" href="#"><i class="iconfont icon-right next-icon"></i></a>
+        </div>
+    </div>
+    <!--开奖公告-->
+    <div class="lottery-announce">
+        <div class="content-auto lottery-bg">
+            <div class="lottery-title">
+                开 奖 公 告
+            </div>
+            <ul>
+                <li>
+                    <img src="./stylesheets/index/images/img_shuangseqiu.png">
+                    <span>福彩3D</span>
+                    <span class="ball-info">102期 试机号259</span>
+                    <span>详情 ></span>
+                </li>
+                <li>
+                    <img src="./stylesheets/index/images/img_shuangseqiu.png">
+                    <span>福彩3D</span>
+                    <span class="ball-info">102期 试机号259</span>
+                    <span>详情 ></span>
+                </li>
+                <li>
+                    <img src="./stylesheets/index/images/img_shuangseqiu.png">
+                    <span>福彩3D</span>
+                    <span class="ball-info">102期 试机号259</span>
+                    <span>详情 ></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--底部-->
+    <% include ../views/common/bottomCom.html %>
+    <% include ../views/common/commonjs.html%>
+    <script src="third-party/jquery.carouFredSel-6.0.4-packed.js"></script>
+    <script>
+        $(window).scroll(function(event){
+            if($(window).scrollTop()>108){
+                $(".head-v3").addClass("fixed-head");
+                $(".carousel").addClass("margin-top-60");
+            }else {
+                $(".head-v3").removeClass("fixed-head");
+                $(".carousel").removeClass("margin-top-60");
+            }
+        });
+
+    </script>
+    <script>
+        seajs.use("/javascripts/index/index", function (index) {
+            index.init();
+        })
+    </script>
+</body>
+</html>

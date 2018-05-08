@@ -1,0 +1,213 @@
+/**
+* Created by huangxiaoyan on 2018/4/20
+*/
+$PLACEHOLDER:#CACACA;
+$NAVBG:#282828;
+$FONTWHITE:#fff;
+$BLACKBG:#000;
+//头部样式
+.head-logo{background: url("../../index/images/header_bg.png");width: 100%;height: 108px;line-height: 108px;
+  .web-logo{width: 160px;height: 83px;}
+  .query{
+    float: right;
+    input{width: 476px;height: 42px;text-indent: 10px;}
+    input::-webkit-input-placeholder{
+      color:$PLACEHOLDER;
+    }
+    input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+      color:$PLACEHOLDER;
+    }
+    input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+      color:$PLACEHOLDER;
+    }
+    input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+      color:$PLACEHOLDER;
+    }
+    .botton{background: $NAVBG;width: 84px;height: 42px;color: $FONTWHITE;float:right;margin-top: 33px;
+      i{
+        font-size: 27px;
+        position: relative;
+        top: -33px;
+        left: 30px;
+      }
+    }
+  }
+}
+//导航条
+.head-v3{width: 100%;z-index:1000;min-width:1000px;height:60px;background: $NAVBG}
+.fixed-head{position:fixed;top: 0px;}
+.logo{float:left;width:20%;height:70px;line-height: 70px;
+  img{float:right;margin:17px 10px 0 0}
+}
+.login-name{float: right;width: 15%;font-size: 20px;color: $PLACEHOLDER;height: 70px;line-height: 70px;}
+.head-v3 .navigation-inner{margin:0 auto;width:980px;position:relative}
+.navbar{
+  border-radius: 0px;
+  border: none;
+  height: 60px;
+  .container-fluid{padding: 0px;
+    .navbar-collapse{padding: 0px;}
+    .navbar-nav>li>a{line-height: 30px}
+  }
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+  background: $BLACKBG;
+  color: $FONTWHITE;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+  color: $FONTWHITE;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+  background: $BLACKBG;
+  color: $FONTWHITE;
+}
+.navbar-default .navbar-nav>li>a{
+  color: $FONTWHITE;
+}
+.navbar-default{
+  background-color: $NAVBG;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+
+}
+.navbar-nav>li>.dropdown-menu{background: rgba(0,0,0,0.8)}
+.dropdown-menu>li>a{color: $FONTWHITE}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+  background-color: rgba(0,0,0,0.9);
+  color: $FONTWHITE;
+}
+//轮播图
+.carousel {
+  .carousel-caption{font-size: 28px}
+  .carousel-control{width: 6%}
+  .carousel-inner>.item{
+    text-align: center;
+    img{display: inline-block;height: 500px}
+  }
+  .glyphicon-chevron-left:before { content: "\e679"; }
+}
+.margin-top-60{
+  margin-top: 60px;
+}
+.carousel-indicators li{
+  width: 62px;height: 8px;background: rgba(0,0,0,0.2);border: none;margin: 1px 16px;
+}
+.carousel-indicators .active{
+  width: 62px;height: 8px;
+}
+
+
+.content-auto{
+  width: 1280px;
+  margin: 0 auto;
+}
+.ellipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.bottom-hr{
+  background-color:$NAVBG;
+  //margin-top: 30px;
+  height:46px;
+  .hr{
+    background: #9e1414;
+    height: 1px;
+    width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .bottom-list{
+    height: 120px;
+    font-size: 12px;
+    color: $FONTWHITE;
+    .bottom-info{
+      padding: 24px;
+      height: 80px;
+      width: 24%;
+      float:left;
+      p{
+        font-size: 13px;
+        margin:2px 0px;
+      }
+      img{
+        width: 60px;
+      }
+    }
+    .bottom-logo{
+      display: -webkit-flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+      width: 26%;
+      float:right;
+    }
+
+  }
+  .bottom-text{
+    color: $FONTWHITE;
+    font-size: 12px;
+    text-align: center;
+    line-height: 46px;
+    //margin-bottom: 235px;
+  }
+}
+
+//分页
+.page_div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-family: "microsoft yahei";
+  color: #666666;
+  margin-right: 10px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+/*
+ * 页数按钮样式
+ */
+
+.page_div a {
+  min-width: 30px;
+  height: 28px;
+  border: 1px solid #dce0e0!important;
+  text-align: center;
+  margin: 0 4px;
+  cursor: pointer;
+  line-height: 28px;
+  color: #666666;
+  font-size: 13px;
+  display: inline-block;
+}
+
+#firstPage,
+#lastPage {
+  width: 50px;
+  color: #c13331;
+  border: 1px solid #c13331!important;
+}
+
+#prePage,
+#nextPage {
+  width: 70px;
+  color: #c13331;
+  border: 1px solid #c13331!important;
+}
+
+.page_div .current {
+  background-color: #c13331;
+  border-color: #c13331;
+  color: #FFFFFF;
+}
+
+.totalPages {
+  margin: 0 10px;
+}
+
+.totalPages span,
+.totalSize span {
+  color: #c13331;
+  margin: 0 5px;
+}
